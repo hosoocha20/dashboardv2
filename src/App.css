@@ -1,0 +1,74 @@
+
+:root{
+  --glass: rgba(255, 255, 255, 0.54);
+  --activeItem: #A7BFE8;
+}
+
+body{
+  margin: 0 0;
+}
+.App{
+  /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+  background: #cdd9eb;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AppGlass{
+  display: grid;
+  height: 97%;
+  width: 97%;
+  border-radius: 2rem;
+  background: #f6f8fb;
+  /* background-color: var(--glass); */
+  overflow: hidden;
+  grid-template-columns: 14rem auto;
+  border: 1px solid rgba(128,128,128, 0.5);
+}
+.vert-centre-main-contents{
+  /* width:auto;
+  display: flex;
+  align-items:center; */
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+.active-tab{
+  display: block;
+}
+.tab{
+  display: none;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1200px){
+  .AppGlass{
+    grid-template-columns: 16vw auto;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .AppGlass{
+    grid-template-columns: 8vw auto;
+  }
+}
+@media screen and (max-width: 500px){
+  .AppGlass{
+    grid-template-columns: none;
+    /* grid-template-rows: 40px auto; */
+    background: #cdd9eb; 
+    position: relative;
+  }
+  .App{
+    background: #f6f8fb;
+  }
+  .vert-centre-main-contents{
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+    
+}

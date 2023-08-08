@@ -1,0 +1,512 @@
+.Cards{
+  height: 100%;
+  width: 100%;
+  color: #163F77;
+  margin-top: 10px;
+}
+.cards-laptop-view{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 2.5%;
+  height: 100%;
+  padding: 0 0;
+  align-items: center;
+  box-sizing: border-box;
+}
+.cards-touchscreen-view{
+  display: none;
+}
+
+.card-item{
+    box-sizing: border-box;
+    height: 100%;
+    border-radius: 2rem;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+
+}
+.one{
+  background-color: rgba(160,197,249,  0.9);
+  box-shadow:  -4px 4px 2px #9ec3f7,
+  4px 4px 2px #9ec3f7,
+  -4px -4px 2px #a6cdff,
+  4px -4px 2px #a6cdff;
+    
+}
+.two{
+    background-color: rgba(241, 244, 249, 0.9);
+}
+.three{
+  background-color: rgba(241, 244, 249, 0.9);
+}
+.two, .three{
+  box-shadow:  -4px 4px 2px #e3e5ea,
+  4px 4px 2px #e3e5ea,
+  -4px -4px 2px #f6f9fe,
+  4px -4px 2px #f6f9fe;
+}
+
+
+
+
+.todo-today{
+    position: relative;
+    height: 75%;
+    width: 100%;
+}
+/*Today Form*/
+.todayTodo{
+  height: 15%;
+  max-height: 55px;
+  min-height: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background: rgba(160,197,249,  0.5);
+    border: 2px solid rgba(160,197,249,  0.7);
+    margin: 0 10px;
+    overflow:hidden;
+}
+.todayTodo> input[type="text"]:hover:not(:focus){
+  background: rgba(255, 255, 255, 0.45);
+}
+.todayTodo> input[type="text"]:hover:not(:focus) + button[type="submit"]{ 
+  background: rgba(255, 255, 255, 0.45);
+}
+.todayTodo > input[type="text"]:focus + button[type="submit"]{
+  background-color: rgba(255, 255, 255, 0.45);
+}
+.todayTodo > input[type="text"]:focus{
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+
+.dashboard-input{
+  width: 100%;
+  overflow:hidden;
+  border-color: transparent;
+  background-color: transparent;
+  padding: 0 10px;
+}
+.dashboard-input:focus{
+  outline: none;
+}
+
+.dashboard-btn{
+  width: 35px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+/*TodayList CSS */
+.todayList{
+    box-sizing: border-box;
+    position: absolute;
+    overflow-y: auto;
+    padding: 0 10px;
+    width: 100%;
+    height: 83%;
+    max-height: 90%;
+    margin-top: 10px;  
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/*TaskItem.jsx CSS styles */
+.todayListItem{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 19%;
+    max-height: 55px;
+    min-height: 40px;
+    display: flex;
+    border-radius: 0.25rem;
+    padding: 0 10px;
+    overflow:hidden;
+    align-items: center;
+  /* From https://css.glass */
+  background: rgba(160, 197, 249, 0.45);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(160, 197, 249, 0.4);
+
+}
+.todayListItem:hover{
+  background: rgba(160, 197, 249, 0.25);
+}
+.item-group{
+    margin: 0 0;
+}
+.taskLabel {
+    position: relative;
+    text-align: left;
+  }
+  .checkbox:checked+label {
+    text-decoration: line-through;
+  }
+
+  .icon-btn{
+    margin-left: auto;
+    height: 100%;
+  }
+  .btn{
+    height: 100%;
+    background-color: transparent;
+    border: none;
+  }
+  .edit-icon{
+    cursor: pointer;
+    color: darkGray;
+  }
+  .edit-icon:hover{
+    color: dimGray;
+  }
+  .delete-icon{
+    cursor: pointer;
+    color: darkGray;
+  }
+  .delete-icon:hover{
+    color: dimGray;
+
+  }
+  .todayTodoEdit{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 18%;
+    max-height: 55px;
+    min-height: 40px;
+    display: flex;
+    border-radius: 0.25rem;
+    padding: 0 5px 0 5px;
+    overflow:hidden;
+    align-items: center;
+  /* From https://css.glass */
+  background: rgba(160, 197, 249, 0.20);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(160, 197, 249, 0.95);  
+
+  }
+  .dashboardEdit-input{
+    box-sizing: border-box;
+    width: 95%;
+    height: 50%;
+    overflow:hidden;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  .dashboardEdit-input:focus{
+    outline:none;
+  }
+
+  /*Important Form css*/
+  .importantForm{
+    height: 15%;
+    max-height: 55px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    margin: 0 10px;
+    overflow:hidden;
+    background: rgba(255, 255, 255, 0.61);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  .importantForm > input[type="text"]:hover:not(:focus){
+    background: rgba(255, 255, 255, 0.35);
+  }
+  .importantForm  input[type="text"]:hover:not(:focus) + button[type="submit"]{ 
+    background: rgba(255, 255, 255, 0.35);
+  }
+  .importantForm > input[type="text"]:focus + button[type="submit"]{
+    background-color: rgba(255, 255, 255, 0.45);
+  }
+  .importantForm > input[type="text"]:focus{
+    background-color: rgba(255, 255, 255, 0.35);
+  }  
+  /*Important List css*/
+.todo-important{
+    position: relative;
+    height: 75%;
+    width: 100%;
+    
+}
+
+/*ImportantItem.jxs*/
+  .importantTaskItem{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 19%;
+    max-height: 55px;
+    min-height: 40px;
+    display: flex;
+    border-radius: 0.25rem;
+    padding: 0 10px;
+    overflow:hidden;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.67);
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .importantTaskItem:hover{
+    background: rgba(255, 255, 255, 0.55);
+  }
+  .importantTaskList{
+    box-sizing: border-box;
+    position: absolute;
+    overflow-y: auto;
+    padding: 0 10px;
+    width: 100%;
+    height: 83%;
+    max-height: 90%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+  }
+
+
+
+  /* Goals List CSS*/
+  .goalsForm{
+    height: 15%;
+    max-height: 55px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background: rgba(206,198,228, 0.5);
+    border: 2px solid rgba(206,198,228, 0.7);
+    margin: 0 10px;
+    overflow:hidden;
+  }
+  .goalsForm > input[type="text"]:hover:not(:focus){
+    background: rgba(255, 255, 255, 0.45);
+  }
+  .goalsForm > input[type="text"]:hover:not(:focus) + button[type="submit"]{ 
+    background: rgba(255, 255, 255, 0.45);
+  }
+  .goalsForm > input[type="text"]:focus + button[type="submit"]{
+    background: rgba(255, 255, 255, 0.45);
+  }
+  .goalsForm > input[type="text"]:focus{
+    background: rgba(255, 255, 255, 0.45);
+  }  
+  .todo-goals{
+    position: relative;
+    height: 75%;
+    width: 100%;
+}
+/*Goal.jxs*/
+.goalsItem{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  height: 19%;
+  max-height: 55px;
+  min-height: 40px;
+  display: flex;
+  border-radius: 0.25rem;
+  padding: 0 10px;
+  overflow:hidden;
+  align-items: center;
+  background: rgba(206, 198, 228, 0.75);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(206, 198, 228, 0.8);
+  /* box-sizing: border-box;
+  padding: 0 5px 0 5px; */
+}
+.goalsItem:hover{
+  background: rgba(206, 198, 228, 0.45);
+}
+
+
+.goalsList{
+  box-sizing: border-box;
+  position: absolute;
+  overflow-y: auto;
+  padding: 0 10px;
+  width: 100%;
+  height: 83%;
+  max-height: 90%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+/*EditGoalForm.jsx*/
+.goalTodoEdit{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  height: 18%;
+  max-height: 55px;
+  min-height: 40px;
+  display: flex;
+  border-radius: 0.25rem;
+  padding: 0 5px 0 5px;
+  overflow:hidden;
+  align-items: center;
+/* From https://css.glass */
+background: rgba(206, 198, 228, 0.45);
+box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(206, 198, 228, 0.75);  
+}
+
+/* STYLING SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 3px; /* THIS WILL RESET THE DEFAULT SCORLLBAR STYLING */
+}
+
+/* TO STYLE THE SCROLLBAR TRACK */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* THIS WILL SET THE COLOR OF THE SCROLLBAR TRACK */
+  
+}
+
+/* TO STYLE THE SCROLLBAR THUMB */
+::-webkit-scrollbar-thumb {
+  background-color: #4169a2;
+  border-radius: 5vw;
+  overflow:hidden;
+}
+
+
+.checkbox[type="checkbox"] {
+    display: none;
+  }
+  
+  .checkbox[type="checkbox"] + label:before {
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid #4875b4;
+    content: "";
+    display: inline-block;
+    margin: 0 16px 0 0;
+    padding: 0;
+    vertical-align: top;
+    border-radius: 50%;
+  }
+
+  .checkbox[type="checkbox"]:hover + label:before{
+    content :"✓";
+    color: #4875b4;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .checkbox[type="checkbox"]:checked + label:before {
+    background: #3984FC;
+    border: 1.5px solid #1460c8;
+    font-size: 10px;
+    font-weight: bold;
+    content: "✓";
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+  }
+  
+  
+  .checkbox[type="checkbox"]:focus + label::before {
+    outline: 0;
+  }
+/*Goal checkbox styling*/
+
+  .goal-checkbox:checked+label{
+    text-decoration: line-through;
+  }  
+  .goal-checkbox[type="checkbox"] {
+    display: none;
+  }
+  
+  .goal-checkbox[type="checkbox"] + label:before {
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid #9191cb;
+    content: "";
+    display: inline-block;
+    margin: 0 16px 0 0;
+    padding: 0;
+    vertical-align: top;
+    border-radius: 50%;
+  }
+
+  .goal-checkbox[type="checkbox"]:hover + label:before{
+    content :"✓";
+    color: #9191cb;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .goal-checkbox[type="checkbox"]:checked + label:before {
+    background: #acacfe;
+    border: 1.5px solid #7676be;
+    font-size: 10px;
+    font-weight: bold;
+    content: "✓";
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+  }
+  
+  
+  .goal-checkbox[type="checkbox"]:focus + label::before {
+    outline: 0;
+  }
+
+  @media screen and (max-width:900px){
+
+    .cards-laptop-view{
+      display: none;
+    }
+    .cards-touchscreen-view{
+      display:block;
+      height: 100%;
+      width: 100%;
+      padding: 0 0;
+      box-sizing: border-box;
+      
+    }
+    .mySwiper {
+      height: 100%;
+      width: 100%;
+     
+    }
+    .Cards{
+      /* width: 79vw; */
+      margin-top: 0;
+    }
+
+    .card-item{
+      width: 98%;
+      height: 96%;
+      margin-left:5px;
+      margin-top: -10px;
+    }
+    .card-item>h3{
+      padding-top:8px;
+    }
+
+
+    
+
+  }

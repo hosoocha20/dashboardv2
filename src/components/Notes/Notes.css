@@ -1,0 +1,318 @@
+.notes-grid-container{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 20rem auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: rgb(237,237,240);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    height: 100%;
+    width:100%;
+}
+.notes-sidebar{
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+.notes-heading{
+    margin-left: 10px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.notes-heading-wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.notes-heading-wrap>h2{
+    color: #4169a2;
+}
+
+.search-form{
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    width: 90%;
+    overflow: hidden;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 35px;
+}
+.search-input{
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+}
+.search-input:focus{
+    outline: none;
+}
+
+
+
+/*NoteItemList.jsx */
+.noteItemList-container{
+    height: 70vh;
+    max-height: 80%;
+
+    overflow-y: auto;
+    /* max-height: 50%;
+    border: 1px solid black; 
+    overflow-y: auto;  */
+    
+}
+.noteItemList{
+
+
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0;
+    
+}
+.noteCount{
+    font-size: 12px;
+    font-weight: bold;
+    background: rgba(160, 197, 249, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2px 13px;
+    border-radius: 1rem;
+    color: #4169a2;
+}
+
+
+/*NoteItem.jsx*/
+
+.noteItem{
+    padding-right: 20px;  
+    padding-left: 10px;
+    height: 80px;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    border: 1px solid transparent;
+    border-radius: 0.4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.noteItem:hover{
+    border-radius: 0.4rem;
+    background: rgba(222, 222, 222, 0.83);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.opened{
+    border-radius: 0.4rem;
+    background: rgba(222, 222, 222, 0.83);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.noteItem-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.noteItem-date{
+    font-size: 14px;
+    color: dimgrey;
+}
+.noteItem-title h3{
+    margin: 0;
+    user-select: none;
+    width: 75%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.noteItem-icons{
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+
+}
+.noteItem-sidebar{
+    margin-left: 30px;
+    user-select: none;
+
+}
+.noteItem-sneakpeek{
+    margin-top: 10px;
+}
+
+.dotNote-icon{
+    color: #1778FB;
+}
+
+/*NotePage.jsx */
+.note-page-container{
+    width: 100%;
+    
+}
+.notePage{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left:40px;
+    padding-right: 40px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.notePage-icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+.notePage-back-icon{
+    display: none;
+}
+.notePage-icons-group-right{
+    display: flex;
+    gap: 15px;
+}
+.trash-icon-changeColor:hover{
+    color: dimgray;
+}
+.notePage-title{
+    margin-top: 30px;
+    background: transparent;
+    height: 32px;
+    width: 80%;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+
+}
+.notePage-title:focus{
+    outline: none;
+}
+.notePage-date{
+    margin-top: 10px;
+}
+
+.notePage-body{
+    margin-top: 20px;
+    box-sizing: border-box;
+    height: 75%;
+    width: 100%;
+    resize: none;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.notePage-body:focus{
+    outline: none;
+}
+.notePage-back-icon{
+    border: 1px solid dimGray;
+    padding: 4px 4px;
+    border-radius: 100%;
+}
+
+
+
+
+@keyframes noteListSlideOutAnimation {
+    0% {
+      transform: scaleX(1);
+    }
+    100% {
+      transform: scaleX(0);
+    }
+  }
+  @keyframes noteListSlideInAnimation {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  @keyframes notePageSlideInAnimation{
+    0%{
+        transform: translate3d(0, 0, 0);
+    }
+    100%{
+        transform: translate3d(-100%, 0, 0);
+    }
+  }
+  @keyframes notePageSlideOutAnimation{
+    0%{
+        transform: translate3d(-100%, 0, 0);
+    }
+    100%{
+        transform: translate3d(0, 0, 0);
+    }
+  }
+
+@media screen and (max-width: 1200px){
+    .notes-grid-container{
+        grid-template-columns: 17rem auto;
+    }
+}
+@media screen and (max-width: 1050px){
+    .notes-grid-container{
+        grid-template-columns: 13rem auto;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .notes-grid-container{
+        grid-template-columns: 86vw 86vw;
+        padding-left: 0;
+        padding-right: 0;
+        column-gap: 10px;
+    }
+    .opened{
+        border-radius: 0;
+        background: none;
+        border: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);           
+    }
+    .noteList-slideOut{
+        transform-origin: 0% 0%;
+        animation: noteListSlideOutAnimation .5s forwards;
+    }
+    .notePage-slideIn{
+        animation: notePageSlideInAnimation .5s forwards;
+    }
+    .noteList-slideIn{
+        transform-origin: 0% 0%;
+        animation: noteListSlideInAnimation .5s forwards;
+    }
+    .notePage-slideOut{
+        animation: notePageSlideOutAnimation .5s forwards;
+    }
+    .notePage{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left:5px;
+        padding-right: 10px;
+
+    }
+    .notePage-icons{
+        justify-content: space-between;
+    }
+    .notePage-back-icon{
+        display: block;
+    }
+    .noteItem-trash-icon{
+        display:none;
+    
+    }
+}
+@media screen and (max-width: 500px){
+    .notes-grid-container{
+        grid-template-columns: 95vw 95vw;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 60px;
+        column-gap: 5px;
+        border-radius: 0;
+    }
+}

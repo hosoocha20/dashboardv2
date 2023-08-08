@@ -1,0 +1,47 @@
+.MainDash{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5%;
+    padding: 30px 70px 30px 70px;
+    box-sizing: border-box;
+    background: #cdd9eb;
+    border-radius: 2rem;
+    height: 100%;
+    width: 100%;
+    
+    
+}
+.MainDash>h1{
+    color: #4875b4;
+    margin: 0 0;
+}
+
+
+@media screen and (max-width: 1250px){
+    .MainDash{
+        padding: 30px 40px 30px 40px;
+    }
+    
+}
+
+
+@media screen and (max-width:900px){
+    .MainDash{
+        width: 87vw;
+    }
+}
+@media screen and (max-width: 500px){
+    .MainDash{
+        height: 100%;
+        margin: 0;
+        width: 97vw;
+        padding: 10px 20px 10px 20px;
+        
+    }
+    .MainDash>h1{
+        font-size: 25px;
+        margin-left: 60px;
+        margin-top: 10px;
+    }
+      
+  }

@@ -1,0 +1,259 @@
+:root{
+    --task-height: 300px;
+}
+
+.importantTaskHeading{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #4169a2;
+  border-radius: 1.5rem;
+}
+.importantTaskCount{
+  font-size: 12px;
+  font-weight: bold;
+  background: rgb(242,247,255);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  padding: 2px 13px;
+  border-radius: 1rem;
+  color: #4169a2;
+}
+
+
+/* .mainCheckbox:checked+label{
+    text-decoration: line-through;
+}   */
+
+
+/* input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"] + label:before {
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid #4875b4;
+    content: "";
+    display: inline-block;
+    margin: 0 16px 0 0;
+    padding: 0;
+    vertical-align: top;
+    border-radius: 50%;
+  }
+
+  input[type="checkbox"]:hover + label:before{
+    content :"✓";
+    color: #4875b4;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  input[type="checkbox"]:checked + label:before {
+    background: #3984FC;
+    border: 1.5px solid #1460c8;
+    font-size: 10px;
+    font-weight: bold;
+    content: "✓";
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+  }
+  
+  
+  input[type="checkbox"]:focus + label::before {
+    outline: 0;
+  } */
+
+
+.importantTodo{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: rgba(160,197,249,  0.6);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    height: 100%;
+    width:100%;
+}
+
+
+.mainImportantList-container{
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+.mainImportantList{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap:5px;
+}
+
+.importantMainItem{
+
+    box-sizing: border-box;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.67);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
+    padding: 0 10px 0 10px;
+    color: #163F77;
+  }
+  .importantMainItem:hover{
+    background: rgba(255, 255, 255, 0.55);
+  }
+  .mainIcon-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 10px;
+  }
+  .btn{
+    height: 100%;
+    background-color: transparent;
+  }
+  .mainStar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainEdit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkGray;
+  }
+  .mainDelete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+  }
+  .mainEdit-icon{
+    cursor: pointer;
+    color: darkGray;
+  }
+  .mainEdit-icon:hover{
+    color: dimGray;
+  }
+  .mainDelete-icon{
+    cursor: pointer;
+    color: darkGray;
+  }
+  .mainDelete-icon:hover{
+    color: dimGray;
+
+  }
+
+
+/* .form-container{
+    width: 100%;
+    height:45px;
+    background: rgba(187, 187, 187, 0.72);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(187, 187, 187, 0.3);
+    border-radius: 0.5rem;
+    overflow:hidden;
+} */
+
+.form-container{
+  height: 50px;
+  width: 100%;
+}
+
+.importantTodoForm{
+  display:flex;
+  height:100%;
+  background: rgba(255, 255, 255, 0.61);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.importantTodoForm > input[type="text"]:hover:not(:focus){
+  background: rgba(255, 255, 255, 0.45);
+}
+.importantTodoForm > input[type="text"]:hover:not(:focus) + button[type="submit"]{ 
+  background: rgba(255, 255, 255, 0.45);
+}
+.importantTodoForm > input[type="text"]:focus + button[type="submit"]{
+  background: rgba(255, 255, 255, 0.45);
+}
+.importantTodoForm> input[type="text"]:focus{
+  background: rgba(255, 255, 255, 0.45);
+}  
+.mainTodoFormInput{
+   width: 100%;
+   height: 100%;
+   overflow:hidden;
+   background-color: transparent;
+   border: none;
+   padding-left: 20px;
+}
+.mainTodoFormInput:focus{
+  outline: none;
+}
+.mainTodoForm-btn{
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    overflow:hidden;
+}
+.importantEditForm{
+  display:flex;
+  height:55px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.imEditInput{
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+  padding-left: 47px;
+  background: transparent;
+  border: none;
+}
+.imEditInput:focus{
+  outline: none;
+}
+
+.update-btn{
+  width: 50px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  overflow:hidden;
+}
+
+@media screen and (max-width: 500px){
+  .importantTodo{
+    border-radius: 0;
+    border:none;
+    padding-top: 60px;
+  }
+  .mainImportantList-container{
+    margin-top: 0;
+  }
+}
