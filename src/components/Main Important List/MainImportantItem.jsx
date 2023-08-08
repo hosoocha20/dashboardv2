@@ -1,52 +1,90 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { IconContext } from "react-icons";
-import { RxStar, RxStarFilled } from 'react-icons/rx'
-import { BiPencil } from 'react-icons/bi';
-import { RxTrash } from 'react-icons/rx';
+import { RxStar, RxStarFilled } from "react-icons/rx";
+import { BiPencil } from "react-icons/bi";
+import { RxTrash } from "react-icons/rx";
 
-const MainImportantItem = ({mainTask, deleteMainTask, enterMainTaskEditMode, addCompletedTask, toggleTaskStarred, toggleCompletedTask}) => {
-    const [isChecked, setIsChecked] = useState(mainTask.checked)
-    const [isActive, setIsActive] = useState(mainTask.starred);
-    const handleCheckboxChange = (e) =>{
-        setIsChecked(!isChecked);
-        toggleCompletedTask(mainTask);
-        addCompletedTask(mainTask);
-        
-    }
-    const handleStarredChange = (e) =>{
-        setIsActive(!isActive);
-        toggleTaskStarred(mainTask.id);
-    }
+const MainImportantItem = ({
+  mainTask,
+  deleteMainTask,
+  enterMainTaskEditMode,
+  addCompletedTask,
+  toggleTaskStarred,
+  toggleCompletedTask,
+}) => {
+  const [isChecked, setIsChecked] = useState(mainTask.checked);
+  const [isActive, setIsActive] = useState(mainTask.starred);
+  const handleCheckboxChange = (e) => {
+    setIsChecked(!isChecked);
+    toggleCompletedTask(mainTask);
+    addCompletedTask(mainTask);
+  };
+  const handleStarredChange = (e) => {
+    setIsActive(!isActive);
+    toggleTaskStarred(mainTask.id);
+  };
   return (
     <li className="importantMainItem">
-        <div className="mainItem-group">
-            <input type="checkbox" className='mainCheckbox' checked={isChecked} name={mainTask.name} id={mainTask.id} 
-            onChange={handleCheckboxChange}
+      <div className="mainItem-group">
+        <input
+          type="checkbox"
+          className="mainCheckbox"
+          checked={isChecked}
+          name={mainTask.name}
+          id={mainTask.id}
+          onChange={handleCheckboxChange}
+        />
+        <label className="mainTaskLabel" htmlFor={mainTask.id}>
+          {mainTask.name}
+        </label>
+      </div>
+      <div className="mainIcon-btns">
+        <div
+          className="btn mainEdit"
+          aria-label={`Update ${mainTask.name} Task`}
+        >
+          <BiPencil
+            className="mainEdit-icon"
+            size="17px"
+            onClick={() => enterMainTaskEditMode(mainTask)}
+            onMouseOver={({ target }) => (target.style.color = "dimGray")}
+            onMouseOut={({ target }) => (target.style.color = "darkGray")}
+          />
+        </div>
+        <div
+          className="btn mainDelete"
+          aria-label={`Delete ${mainTask.name} Task`}
+        >
+          <RxTrash
+            className="mainDelete-icon"
+            size="17px"
+            onClick={() => deleteMainTask(mainTask.id)}
+            onMouseOver={({ target }) => (target.style.color = "dimGray")}
+            onMouseOut={({ target }) => (target.style.color = "darkGray")}
+          />
+        </div>
+        <div className="btn mainStar">
+          {isActive ? (
+            <RxStarFilled
+              color={"#F4C430"}
+              size="21px"
+              onClick={() => {
+                handleStarredChange();
+              }}
             />
-            <label className='mainTaskLabel' htmlFor={mainTask.id}>
-                {mainTask.name}
-            </label>
+          ) : (
+            <RxStar
+              color="gold"
+              size="21px"
+              onClick={() => {
+                handleStarredChange();
+              }}
+            />
+          )}
         </div>
-        <div className="mainIcon-btns">
-            <div className='btn mainEdit' aria-label={`Update ${mainTask.name} Task`}  >
-                <BiPencil  className='mainEdit-icon'  size="17px" onClick={() => enterMainTaskEditMode(mainTask)} 
-                    onMouseOver={({target})=>target.style.color="dimGray"}  onMouseOut={({target})=>target.style.color="darkGray"}/>
-            </div>
-            <div className='btn mainDelete' aria-label={`Delete ${mainTask.name} Task`} >
-                <RxTrash className='mainDelete-icon' size="17px" onClick={() => deleteMainTask(mainTask.id)}
-                    onMouseOver={({target})=>target.style.color="dimGray"}  onMouseOut={({target})=>target.style.color="darkGray"} />
-            </div>
-            <div className="btn mainStar">
-                    {isActive? <RxStarFilled  color={'#F4C430'} size="21px" onClick={()=>{
-                        handleStarredChange()}} />:
-                    <RxStar color="gold" size="21px" onClick={()=>{
-                        handleStarredChange()}} />
-                    }
-            </div>
-        </div>
+      </div>
     </li>
-  )
-}
+  );
+};
 
-export default MainImportantItem
-
+export default MainImportantItem;
