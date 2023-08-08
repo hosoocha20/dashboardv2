@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/hosoocha20/dashboardv2/static/css/main.9fe69d0a.css",
+    "main.js": "/hosoocha20/dashboardv2/static/js/main.353214bc.js",
+    "static/media/undraw_new_year_2023_pfnc.svg": "/hosoocha20/dashboardv2/static/media/undraw_new_year_2023_pfnc.ae65e2a55e8d8d23fee120f10a2c6be5.svg",
+    "static/media/day_snow.svg": "/hosoocha20/dashboardv2/static/media/day_snow.89ca53483f5f29f7ae564377a91be31c.svg",
+    "static/media/day_rain_thunder.svg": "/hosoocha20/dashboardv2/static/media/day_rain_thunder.3e661e052bd71c506d8343afc570c781.svg",
+    "static/media/day_rain.svg": "/hosoocha20/dashboardv2/static/media/day_rain.d485103687e78065a25b0d535cdeb079.svg",
+    "static/media/day_partial_cloud.svg": "/hosoocha20/dashboardv2/static/media/day_partial_cloud.0a5976431503e19ad1fc51d9f8d0411b.svg",
+    "static/media/night_half_moon_snow.svg": "/hosoocha20/dashboardv2/static/media/night_half_moon_snow.e37bf03c4a444b97b1091a13edb8cecc.svg",
+    "static/media/day_clear.svg": "/hosoocha20/dashboardv2/static/media/day_clear.a2fab9b98b5a306b601e7c5d8eb2e9c4.svg",
+    "static/media/night_half_moon_rain_thunder.svg": "/hosoocha20/dashboardv2/static/media/night_half_moon_rain_thunder.fc8d36132cdb2768967782efe98f3ff9.svg",
+    "static/media/night_half_moon_rain.svg": "/hosoocha20/dashboardv2/static/media/night_half_moon_rain.e5fc5211023be3e5f1c8e2ee3c44b7f2.svg",
+    "static/media/night_half_moon_partial_cloud.svg": "/hosoocha20/dashboardv2/static/media/night_half_moon_partial_cloud.080e33762ecc3017fdf4a77d4c4a5c6e.svg",
+    "static/media/fog.svg": "/hosoocha20/dashboardv2/static/media/fog.72cd1977da99344e4e38bd42f6ab4d67.svg",
+    "static/media/rain.svg": "/hosoocha20/dashboardv2/static/media/rain.3b0b656ee1529587cee4f08b84033f90.svg",
+    "static/media/night_half_moon_clear.svg": "/hosoocha20/dashboardv2/static/media/night_half_moon_clear.76455037f345e83b5ae483c249dacf93.svg",
+    "index.html": "/hosoocha20/dashboardv2/index.html",
+    "main.9fe69d0a.css.map": "/hosoocha20/dashboardv2/static/css/main.9fe69d0a.css.map",
+    "main.353214bc.js.map": "/hosoocha20/dashboardv2/static/js/main.353214bc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9fe69d0a.css",
+    "static/js/main.353214bc.js"
+  ]
+}
