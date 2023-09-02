@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dashboardv2/static/css/main.9fe69d0a.css",
-    "main.js": "/dashboardv2/static/js/main.854c13ef.js",
+    "main.js": "/dashboardv2/static/js/main.65795920.js",
     "static/media/undraw_new_year_2023_pfnc.svg": "/dashboardv2/static/media/undraw_new_year_2023_pfnc.ae65e2a55e8d8d23fee120f10a2c6be5.svg",
     "static/media/day_snow.svg": "/dashboardv2/static/media/day_snow.89ca53483f5f29f7ae564377a91be31c.svg",
     "static/media/day_rain_thunder.svg": "/dashboardv2/static/media/day_rain_thunder.3e661e052bd71c506d8343afc570c781.svg",
@@ -17,10 +17,10 @@
     "static/media/night_half_moon_clear.svg": "/dashboardv2/static/media/night_half_moon_clear.76455037f345e83b5ae483c249dacf93.svg",
     "index.html": "/dashboardv2/index.html",
     "main.9fe69d0a.css.map": "/dashboardv2/static/css/main.9fe69d0a.css.map",
-    "main.854c13ef.js.map": "/dashboardv2/static/js/main.854c13ef.js.map"
+    "main.65795920.js.map": "/dashboardv2/static/js/main.65795920.js.map"
   },
   "entrypoints": [
     "static/css/main.9fe69d0a.css",
-    "static/js/main.854c13ef.js"
+    "static/js/main.65795920.js"
   ]
 }
