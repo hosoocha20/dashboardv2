@@ -1,7 +1,7 @@
 {
   "name": "react-dash",
   "version": "0.1.0",
-  "homepage": "https://hosoocha20.github.io/dashboardv2",
+  "homepage": "https://hosoocha20.github.io",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^2.0.16",
