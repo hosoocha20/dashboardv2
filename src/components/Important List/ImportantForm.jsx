@@ -27,6 +27,7 @@ const ImportantForm = ({ addImportant }) => {
           setImportant(e.target.value);
         }}
         maxLength={60}
+        autoComplete="off"
       />
       <button
         className="dashboard-btn"

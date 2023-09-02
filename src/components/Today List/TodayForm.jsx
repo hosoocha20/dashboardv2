@@ -5,13 +5,13 @@ const TodayForm = ({ addTask }) => {
   const [task, setTask] = useState("");
 
   const handleFormSubmit = (e) => {
-    e.preventDefault(); //prevent page refreshing
+    e.preventDefault(); 
     addTask({
       name: task,
       checked: false,
       id: Date.now(),
     });
-    setTask(""); //reset watever we entered in form after submitting
+    setTask(""); 
   };
 
   return (
@@ -24,6 +24,7 @@ const TodayForm = ({ addTask }) => {
         value={task}
         onInput={(e) => setTask(e.target.value)}
         maxLength={25}
+        autoComplete="off"
       />
       <button className="dashboard-btn" aria-label="Add Task" type="submit">
         +

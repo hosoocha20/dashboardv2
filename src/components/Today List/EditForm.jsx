@@ -17,7 +17,7 @@ const EditForm = ({ editedTask, updateTask, closeEditMode }) => {
   }, [closeEditMode]);
 
   const handleFormSubmit = (e) => {
-    e.preventDefault(); //prevent page refreshing
+    e.preventDefault(); 
     updateTask({ ...editedTask, name: updatedTaskName });
   };
 
@@ -38,6 +38,7 @@ const EditForm = ({ editedTask, updateTask, closeEditMode }) => {
         onInput={(e) => setUpdatedTaskName(e.target.value)}
         autoFocus
         maxLength={25}
+        autoComplete="off"
       />
       <button
         className="dashboard-btn"

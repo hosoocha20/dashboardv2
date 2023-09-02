@@ -23,6 +23,7 @@ const MainTodoForm = ({ addMainTask }) => {
         maxLength={60}
         value={mainTask}
         onInput={(e) => setMainTask(e.target.value)}
+        autoComplete="off"
       />
       <button type="submit" className="mainTodoForm-btn">
         +
